@@ -5,6 +5,7 @@ import {
   I18nConfig,
   OccConfig,
   provideConfig,
+  RoutingConfig,
   SiteContextConfig,
 } from '@spartacus/core';
 import {
@@ -53,6 +54,15 @@ import {
         },
       },
     } as IconConfig),
+    provideConfig({
+      routing: {
+        routes: {
+          wishlist: {
+            paths: ['my-account/wishlist'],
+          },
+        },
+      },
+    } as RoutingConfig),
   ],
 })
 export class SpartacusConfigurationModule {}

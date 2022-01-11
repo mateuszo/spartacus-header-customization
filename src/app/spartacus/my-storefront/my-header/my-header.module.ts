@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { UrlModule } from '@spartacus/core';
 import {
+  GenericLinkModule,
   IconModule,
   MiniCartModule,
   PageSlotModule,
@@ -12,11 +13,12 @@ import { MyHeaderComponent } from './my-header.component';
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule,
+    GenericLinkModule,
     SearchBoxModule,
     PageSlotModule,
     MiniCartModule,
     IconModule,
+    UrlModule,
   ],
   declarations: [MyHeaderComponent],
   exports: [MyHeaderComponent],
