@@ -9,6 +9,8 @@ import {
 } from '@spartacus/core';
 import {
   defaultCmsContentProviders,
+  IconConfig,
+  LayoutConfig,
   layoutConfig,
   mediaConfig,
 } from '@spartacus/storefront';
@@ -45,6 +47,32 @@ import {
         level: '4.2',
       },
     }),
+    provideConfig({
+      layoutSlots: {
+        header: {
+          lg: {
+            slots: [
+              'PreHeader',
+              'SiteLinks',
+              'SiteContext',
+              'SiteLogo',
+              'NavigationBar',
+              'SearchBox',
+              'SiteLogin',
+              'MiniCart',
+            ],
+          },
+          slots: ['PreHeader', 'SiteLogo', 'SearchBox', 'MiniCart'],
+        },
+      },
+    } as LayoutConfig),
+    provideConfig({
+      icon: {
+        symbols: {
+          USER: 'far fa-user',
+        },
+      },
+    } as IconConfig),
   ],
 })
 export class SpartacusConfigurationModule {}

@@ -1,4 +1,100 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900&display=swap&subset=latin-ext");
 
 $styleVersion: 4.2;
-@import '~@spartacus/styles/index';
+$font-family-base: "Raleway", sans-serif;
+$skipComponentStyles: (cx-mini-cart);
+
+@import "~@spartacus/styles/index";
+// @import "~@spartacus/styles/scss/theme/santorini";
+
+header {
+  // background: none;
+  background: linear-gradient(to top, white 80px, #f1f2f3 0);
+
+  .SiteLinks {
+    justify-content: unset;
+    color: #43464e;
+    text-decoration: underline;
+    font-size: 0.875rem;
+  }
+
+  .SiteLogin {
+    cx-icon {
+      color: black;
+      margin: 24px;
+    }
+  }
+
+  .SiteContext {
+    justify-content: flex-end;
+    color: #43464e;
+    select {
+      background: none;
+    }
+    &::after {
+      content: none;
+    }
+  }
+
+  .NavigationBar {
+    flex: unset;
+    cx-navigation-ui {
+      nav:nth-of-type(n + 4) {
+        display: none;
+      }
+      a,
+      span {
+        color: black;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+cx-mini-cart {
+  position: relative;
+  margin-right: 1rem;
+  a {
+    color: initial;
+  }
+  .total {
+    display: none;
+  }
+  .count {
+    position: absolute;
+    top: -0.5rem;
+    padding: 0 0.25rem;
+  }
+}
+
+cx-searchbox {
+  color: gray;
+  border-bottom: 2px solid black;
+  margin-bottom: 0.25rem;
+  label {
+    padding: unset;
+    div.search-icon {
+      flex-basis: unset;
+      align-self: center;
+      padding: unset;
+    }
+    input {
+      height: unset;
+    }
+  }
+  & > * {
+    background-color: unset;
+  }
+}
+
+// cx-page-slot.SiteLogo::before {
+//   background-color: var(--cx-color-dark);
+//   content: "";
+//   height: 44px;
+//   left: 0;
+//   position: absolute;
+//   top: 0;
+//   width: 100vw;
+//   z-index: -1;
+// }
