@@ -1,0 +1,18 @@
+cx-searchbox {
+  border-bottom: 2px solid black;
+  margin-bottom: 0.25rem;
+  label {
+    padding: unset;
+    div.search-icon {
+      flex-basis: unset;
+      align-self: center;
+      padding: unset;
+    }
+    input {
+      height: unset;
+    }
+  }
+  & > * {
+    background-color: unset;
+  }
+}

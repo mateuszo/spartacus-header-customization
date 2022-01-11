@@ -1,0 +1,15 @@
+cx-mini-cart {
+  position: relative;
+  margin-right: 1rem;
+  a {
+    color: initial;
+  }
+  .total {
+    display: none;
+  }
+  .count {
+    position: absolute;
+    top: -0.5rem;
+    padding: 0 0.25rem;
+  }
+}

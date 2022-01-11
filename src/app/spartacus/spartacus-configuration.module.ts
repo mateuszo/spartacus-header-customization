@@ -9,6 +9,7 @@ import {
 } from '@spartacus/core';
 import {
   defaultCmsContentProviders,
+  IconConfig,
   layoutConfig,
   mediaConfig,
 } from '@spartacus/storefront';
@@ -45,6 +46,13 @@ import {
         level: '4.2',
       },
     }),
+    provideConfig({
+      icon: {
+        symbols: {
+          USER: 'far fa-user',
+        },
+      },
+    } as IconConfig),
   ],
 })
 export class SpartacusConfigurationModule {}

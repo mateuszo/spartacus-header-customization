@@ -1,0 +1,15 @@
+cx-site-context-selector {
+  label {
+    margin: 0;
+    span {
+      display: none;
+    }
+  }
+  cx-icon.fa-angle-down {
+    display: none;
+  }
+  select {
+    border: none;
+    background: none;
+  }
+}

@@ -1,5 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900&display=swap&subset=latin-ext");
 
 $styleVersion: 4.2;
-$skipComponentStyles: (header);
+$skipComponentStyles: (header, cx-site-context-selector, cx-mini-cart);
+$font-family-base: "Raleway", sans-serif;
+
 @import "~@spartacus/styles/index";
+@import "styles/components/index";
+
+:root {
+  --cx-color-secondary: #f1f2f3;
+}

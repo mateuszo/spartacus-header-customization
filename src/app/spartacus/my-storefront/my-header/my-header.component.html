@@ -1,15 +1,27 @@
-<div class="container">
-  <div class="row justify-content-between">
-    <cx-page-slot position="SiteLinks"></cx-page-slot>
-    <p>Download our application.</p>
-    <p>Context selector</p>
+<div class="top-header py-2">
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <cx-page-slot position="SiteLinks"></cx-page-slot>
+      <div>
+        Download our application. <a><u>Find out more</u></a>
+      </div>
+      <cx-page-slot
+        class="d-flex align-items-center"
+        position="SiteContext"
+      ></cx-page-slot>
+    </div>
   </div>
-  <div class="row justify-content-between">
+</div>
+
+<div class="container">
+  <div class="row justify-content-between align-items-center">
     <a routerLink="/"><img src="assets/logo.png" /></a>
     <cx-page-slot position="NavigationBar"></cx-page-slot>
     <cx-searchbox></cx-searchbox>
-    <div>my account</div>
-    <div>wishlist</div>
-    <div>cart</div>
+    <div class="header-icons">
+      <cx-icon [cxIcon]="'USER'"></cx-icon>
+      <cx-icon [cxIcon]="'EMPTY_HEART'"></cx-icon>
+      <cx-mini-cart></cx-mini-cart>
+    </div>
   </div>
 </div>
