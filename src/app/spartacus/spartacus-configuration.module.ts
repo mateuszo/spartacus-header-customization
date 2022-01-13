@@ -62,7 +62,6 @@ import {
               'MiniCart',
             ],
           },
-          slots: ['PreHeader', 'SiteLogo', 'SearchBox', 'MiniCart'],
         },
       },
     } as LayoutConfig),

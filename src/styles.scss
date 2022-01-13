@@ -6,55 +6,76 @@ $font-family-base: "Raleway", sans-serif;
 $skipComponentStyles: (cx-mini-cart);
 
 @import "~@spartacus/styles/index";
-// @import "~@spartacus/styles/scss/theme/santorini";
 
+:root {
+  --cx-color-secondary: #f1f2f3;
+  --cx-color-primary: #43464e;
+}
+
+// ...
+
+// header section styles
 header {
-  // background: none;
-  background: linear-gradient(to top, white 80px, #f1f2f3 0);
+  --line-height: 1.6rem;
+  --padding: 1rem;
+  background: linear-gradient(
+    to bottom,
+    var(--cx-color-secondary) calc(var(--line-height) + var(--padding)),
+    transparent 0
+  );
+  color: var(--cx-color-primary);
 
   .SiteLinks {
+    color: unset;
     justify-content: unset;
-    color: #43464e;
-    text-decoration: underline;
     font-size: 0.875rem;
-  }
-
-  .SiteLogin {
-    cx-icon {
-      color: black;
-      margin: 24px;
-    }
   }
 
   .SiteContext {
     justify-content: flex-end;
-    color: #43464e;
-    select {
-      background: none;
-    }
     &::after {
-      content: none;
+      content: none; // remove the border between upper and lower header divider
     }
   }
 
   .NavigationBar {
     flex: unset;
-    cx-navigation-ui {
-      nav:nth-of-type(n + 4) {
-        display: none;
-      }
-      a,
-      span {
-        color: black;
-        font-weight: 400;
-      }
-    }
   }
 }
 
+// limits the number of top level navigation nodes
+cx-navigation-ui > nav:nth-of-type(n + 4) {
+  display: none;
+}
+
+// navigation component styles
+cx-navigation-ui.flyout {
+  a,
+  span {
+    font-weight: 400;
+  }
+}
+
+// generic link component styles
+cx-generic-link {
+  a {
+    text-decoration: underline;
+  }
+}
+
+// site context selector component styles
+cx-site-context-selector {
+  color: var(--cx-color-primary);
+  select {
+    background: none;
+  }
+}
+
+// mini cart component styles.
+// !! Remember to remove the default component styles with: `$skipComponentStyles: (cx-mini-cart);`
 cx-mini-cart {
-  position: relative;
   margin-right: 1rem;
+  position: relative;
   a {
     color: initial;
   }
@@ -62,21 +83,22 @@ cx-mini-cart {
     display: none;
   }
   .count {
+    padding: 0 0.25rem;
     position: absolute;
     top: -0.5rem;
-    padding: 0 0.25rem;
   }
 }
 
+// searchbox component styles
 cx-searchbox {
-  color: gray;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--cx-color-primary);
+  color: var(--cx-color-primary);
   margin-bottom: 0.25rem;
   label {
     padding: unset;
     div.search-icon {
-      flex-basis: unset;
       align-self: center;
+      flex-basis: unset;
       padding: unset;
     }
     input {
@@ -87,14 +109,3 @@ cx-searchbox {
     background-color: unset;
   }
 }
-
-// cx-page-slot.SiteLogo::before {
-//   background-color: var(--cx-color-dark);
-//   content: "";
-//   height: 44px;
-//   left: 0;
-//   position: absolute;
-//   top: 0;
-//   width: 100vw;
-//   z-index: -1;
-// }
