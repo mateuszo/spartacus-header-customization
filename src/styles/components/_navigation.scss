@@ -1,14 +1,4 @@
 cx-category-navigation {
-  // NOTION: don't use this in production.
-  // This is only to make the navigation fit the design which doesn't support more top level navigation items
-  //   max-width: 400px;
-  //   overflow: hidden;
-  cx-navigation-ui {
-    nav:nth-of-type(n + 4) {
-      display: none;
-    }
-  }
-
   span,
   a {
     font-weight: 400;

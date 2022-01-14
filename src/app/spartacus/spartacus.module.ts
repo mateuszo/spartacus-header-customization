@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BaseStorefrontModule } from '@spartacus/storefront';
-import { MyStorefrontModule } from './my-storefront/my-storefront.module';
 import { SpartacusConfigurationModule } from './spartacus-configuration.module';
 import { SpartacusFeaturesModule } from './spartacus-features.module';
 
@@ -10,8 +9,7 @@ import { SpartacusFeaturesModule } from './spartacus-features.module';
     SpartacusFeaturesModule,
     SpartacusConfigurationModule,
     BaseStorefrontModule,
-    MyStorefrontModule,
   ],
-  exports: [BaseStorefrontModule, MyStorefrontModule],
+  exports: [BaseStorefrontModule],
 })
 export class SpartacusModule {}

@@ -1,8 +1,15 @@
 .top-header {
   background-color: var(--cx-color-secondary);
+  font-size: 0.875rem;
 }
 
 .header-icons {
   display: flex;
   gap: 2rem;
+}
+
+.SiteLinks {
+  // this is a trick to pass a margin parameter to child cx-generic-link component
+  // which are dynamically rendered in the slot
+  --cx-margin: 0.5rem 8px;
 }
