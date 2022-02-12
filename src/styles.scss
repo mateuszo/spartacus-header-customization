@@ -72,6 +72,7 @@ cx-searchbox {
   margin-bottom: 0.25rem;
   label {
     padding: unset;
+    width: unset;
     div.search-icon {
       align-self: center;
       flex-basis: unset;
@@ -84,4 +85,8 @@ cx-searchbox {
   & > * {
     background-color: unset;
   }
+}
+
+cx-page-layout.LandingPage2Template cx-page-slot.Section1 {
+  margin-top: unset;
 }
