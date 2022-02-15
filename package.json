@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "generate:icons": "svg-sprite-generate -d resources/icons -o src/assets/icons-sheet.svg"
   },
   "private": true,
   "dependencies": {
@@ -57,6 +58,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "svg-sprite-generator": "^0.0.7",
     "typescript": "~4.3.5"
   }
 }
