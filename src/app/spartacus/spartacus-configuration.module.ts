@@ -56,12 +56,23 @@ import {
           MENU: 'menu',
           USER: 'account',
           WISHLIST: 'wishlist',
+          TEST: 'test',
         },
         resources: [
           {
             type: IconResourceType.SVG,
             url: './assets/icons-sheet.svg',
-            types: ['CART', 'HOME', 'MENU', 'USER', 'WISHLIST'],
+            types: ['HOME', 'MENU'],
+          },
+          {
+            type: IconResourceType.SVG,
+            url: './assets/icons-sheet2.svg',
+            types: ['CART', 'USER', 'WISHLIST'],
+          },
+          {
+            type: IconResourceType.SVG,
+            url: './assets/icons-sheet3.svg',
+            types: ['TEST'],
           },
           {
             type: IconResourceType.LINK,
