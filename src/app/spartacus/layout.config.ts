@@ -3,7 +3,10 @@ import { LayoutConfig } from '@spartacus/storefront';
 export const myLayoutConfig: LayoutConfig = {
   layoutSlots: {
     topHeader: {
-      slots: ['SiteLinks', 'SiteContext'],
+      lg: {
+        slots: ['SiteLinks', 'SiteContext'],
+      },
+      slots: ['SiteLinks', 'SiteLogo', 'SiteContext'],
     },
     header: {
       lg: {
@@ -12,10 +15,11 @@ export const myLayoutConfig: LayoutConfig = {
           'NavigationBar',
           'SearchBox',
           'SiteLogin',
+          'WishlistIcon',
           'MiniCart',
         ],
       },
-      slots: ['PreHeader', 'SiteLogo', 'SearchBox', 'MiniCart'],
+      slots: [],
     },
   },
 };

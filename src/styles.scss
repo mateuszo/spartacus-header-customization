@@ -18,6 +18,12 @@ cx-navigation-ui > nav:nth-of-type(n + 4) {
   display: none;
 }
 
+header {
+  cx-page-layout cx-page-slot {
+    flex: none;
+  }
+}
+
 .top-header-background {
   background-color: var(--cx-color-secondary);
 }
@@ -28,19 +34,34 @@ cx-navigation-ui > nav:nth-of-type(n + 4) {
   max-width: var(--cx-page-width-max);
   margin: auto;
   align-items: center;
+  justify-content: space-between;
+
   .SiteLinks {
     justify-content: start;
-    & > * {
-      flex: none;
-    }
     // this is a trick to pass a margin parameter to child cx-link components
     // which are dynamically rendered in the slot
     --cx-margin: 0.5rem 8px;
+
+    & > * {
+      flex: none;
+    }
+    @media (max-width: 1024px) {
+      cx-link {
+        display: none;
+      }
+      cx-link:last-of-type {
+        display: block;
+      }
+    }
   }
+
   .SiteContext {
     justify-content: end;
     & > * {
       flex: none;
+    }
+    @media (max-width: 1024px) {
+      flex-direction: column;
     }
   }
 }
@@ -50,6 +71,12 @@ cx-navigation-ui > nav:nth-of-type(n + 4) {
   max-width: var(--cx-page-width-max);
   margin: auto;
   align-items: center;
+  justify-content: space-between;
+  .SiteLogin {
+    & > * {
+      flex: none;
+    }
+  }
 }
 
 cx-navigation-ui.flyout {

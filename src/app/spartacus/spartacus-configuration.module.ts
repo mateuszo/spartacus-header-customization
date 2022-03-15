@@ -9,6 +9,8 @@ import {
 } from '@spartacus/core';
 import {
   defaultCmsContentProviders,
+  IconConfig,
+  IconResourceType,
   layoutConfig,
   mediaConfig,
 } from '@spartacus/storefront';
@@ -47,6 +49,28 @@ import { myLayoutConfig } from './layout.config';
         level: '4.2',
       },
     }),
+    provideConfig({
+      icon: {
+        symbols: {
+          CART: 'cart',
+          HOME: 'home',
+          MENU: 'menu',
+          USER: 'account',
+          WISHLIST: 'wishlist',
+        },
+        resources: [
+          {
+            type: IconResourceType.SVG,
+            url: './assets/icons-sheet.svg',
+            types: ['CART', 'HOME', 'MENU', 'USER', 'WISHLIST'],
+          },
+          {
+            type: IconResourceType.LINK,
+            url: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css',
+          },
+        ],
+      },
+    } as IconConfig),
   ],
 })
 export class SpartacusConfigurationModule {}
