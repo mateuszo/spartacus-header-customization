@@ -1,4 +1,117 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900&display=swap&subset=latin-ext");
+$font-family-base: "Raleway", sans-serif;
 
 $styleVersion: 4.2;
-@import '~@spartacus/styles/index';
+// remove default styles for the header section and some components
+$skipComponentStyles: (header, cx-mini-cart);
+
+@import "~@spartacus/styles/index";
+
+// define color variables
+:root {
+  --cx-color-secondary: #f1f2f3;
+  --cx-color-primary: #43464e;
+}
+
+// limits the number of top level navigation nodes
+cx-navigation-ui > nav:nth-of-type(n + 4) {
+  display: none;
+}
+
+.top-header-background {
+  background-color: var(--cx-color-secondary);
+}
+
+.topHeader {
+  font-size: 0.875rem;
+  display: flex;
+  max-width: var(--cx-page-width-max);
+  margin: auto;
+  align-items: center;
+  .SiteLinks {
+    justify-content: start;
+    & > * {
+      flex: none;
+    }
+    // this is a trick to pass a margin parameter to child cx-link components
+    // which are dynamically rendered in the slot
+    --cx-margin: 0.5rem 8px;
+  }
+  .SiteContext {
+    justify-content: end;
+    & > * {
+      flex: none;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  max-width: var(--cx-page-width-max);
+  margin: auto;
+  align-items: center;
+}
+
+cx-navigation-ui.flyout {
+  a,
+  span {
+    font-weight: 400;
+  }
+}
+
+// generic link component styles
+cx-generic-link {
+  a {
+    text-decoration: underline;
+  }
+}
+
+// site context selector component styles
+cx-site-context-selector {
+  color: var(--cx-color-primary);
+  margin-top: 0;
+  margin-bottom: 0;
+  select {
+    background: none;
+  }
+}
+
+// mini cart component styles
+// remove default component styles first: `$skipComponentStyles: (cx-mini-cart);`
+cx-mini-cart {
+  margin-right: 1rem;
+  position: relative;
+  a {
+    color: initial;
+  }
+  .total {
+    display: none;
+  }
+  .count {
+    padding: 0 0.25rem;
+    position: absolute;
+    top: -0.5rem;
+  }
+}
+
+// searchbox component styles
+cx-searchbox {
+  border-bottom: 2px solid var(--cx-color-primary);
+  color: var(--cx-color-primary);
+  margin-bottom: 0.25rem;
+  label {
+    padding: unset;
+    width: unset;
+    div.search-icon {
+      align-self: center;
+      flex-basis: unset;
+      padding: unset;
+    }
+    input {
+      height: unset;
+    }
+  }
+  & > * {
+    background-color: unset;
+  }
+}

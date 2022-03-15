@@ -12,12 +12,14 @@ import {
   layoutConfig,
   mediaConfig,
 } from '@spartacus/storefront';
+import { myLayoutConfig } from './layout.config';
 
 @NgModule({
   declarations: [],
   imports: [],
   providers: [
     provideConfig(layoutConfig),
+    provideConfig(myLayoutConfig),
     provideConfig(mediaConfig),
     ...defaultCmsContentProviders,
     provideConfig(<OccConfig>{
