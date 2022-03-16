@@ -2,7 +2,7 @@ import { LayoutConfig } from '@spartacus/storefront';
 
 export const myLayoutConfig: LayoutConfig = {
   layoutSlots: {
-    topHeader: {
+    TopHeaderSection: {
       lg: {
         slots: ['SiteLinks', 'SiteContext'],
       },
@@ -20,6 +20,12 @@ export const myLayoutConfig: LayoutConfig = {
         ],
       },
       slots: [],
+    },
+    BottomNavSection: {
+      lg: {
+        slots: [],
+      },
+      slots: ['BottomNav'],
     },
   },
 };

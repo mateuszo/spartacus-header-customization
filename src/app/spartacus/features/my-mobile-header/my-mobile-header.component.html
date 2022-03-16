@@ -1,0 +1,38 @@
+<div
+  class="bottom-nav px-4 py-2 fixed-bottom d-flex justify-content-between align-items-end text-center"
+>
+  <div>
+    <cx-generic-link class="text-decoration-none" [url]="'/'">
+      <cx-icon [cxIcon]="'HOME'"></cx-icon>
+      <div>Home</div>
+    </cx-generic-link>
+  </div>
+  <div>
+    <cx-icon [cxIcon]="'MENU'"></cx-icon>
+    <div>Menu</div>
+  </div>
+  <div>
+    <cx-generic-link
+      class="text-decoration-none"
+      [url]="{ cxRoute: 'wishlist' } | cxUrl"
+    >
+      <cx-icon [cxIcon]="'WISHLIST'"></cx-icon>
+      <div>Wishlist</div>
+    </cx-generic-link>
+  </div>
+  <div>
+    <cx-generic-link
+      class="text-decoration-none"
+      [url]="{ cxRoute: 'login' } | cxUrl"
+    >
+      <cx-icon [cxIcon]="'USER'"></cx-icon>
+      <div>User</div>
+    </cx-generic-link>
+  </div>
+  <div>
+    <div class="cart-bulb">
+      <cx-icon class="text-white" [cxIcon]="'CART'"></cx-icon>
+    </div>
+    <div>Cart</div>
+  </div>
+</div>

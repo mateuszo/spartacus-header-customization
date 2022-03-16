@@ -18,34 +18,48 @@ cx-navigation-ui > nav:nth-of-type(n + 4) {
   display: none;
 }
 
+// header section styles
 header {
   cx-page-layout cx-page-slot {
     flex: none;
   }
 }
 
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  max-width: var(--cx-page-width-max);
+  .SiteLogin {
+    & > * {
+      flex: none;
+    }
+  }
+}
+
+// TopHeaderSection styles
 .top-header-background {
   background-color: var(--cx-color-secondary);
 }
 
-.topHeader {
-  font-size: 0.875rem;
-  display: flex;
-  max-width: var(--cx-page-width-max);
-  margin: auto;
+.TopHeaderSection {
   align-items: center;
+  display: flex;
+  font-size: 0.875rem;
   justify-content: space-between;
+  margin: auto;
+  max-width: var(--cx-page-width-max);
 
   .SiteLinks {
     justify-content: start;
-    // this is a trick to pass a margin parameter to child cx-link components
-    // which are dynamically rendered in the slot
     --cx-margin: 0.5rem 8px;
 
     & > * {
       flex: none;
     }
-    @media (max-width: 1024px) {
+    // a trick to display only last site link on mobile
+    @media (max-width: 768px) {
       cx-link {
         display: none;
       }
@@ -60,25 +74,13 @@ header {
     & > * {
       flex: none;
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 768px) {
       flex-direction: column;
     }
   }
 }
 
-.header {
-  display: flex;
-  max-width: var(--cx-page-width-max);
-  margin: auto;
-  align-items: center;
-  justify-content: space-between;
-  .SiteLogin {
-    & > * {
-      flex: none;
-    }
-  }
-}
-
+// navigation component styles
 cx-navigation-ui.flyout {
   a,
   span {
@@ -141,4 +143,8 @@ cx-searchbox {
   & > * {
     background-color: unset;
   }
+}
+
+cx-page-layout.LandingPage2Template cx-page-slot.Section1 {
+  margin-top: 0px;
 }

@@ -7,11 +7,10 @@
       (keydown.escape)="collapseMenu()"
       (click)="collapseMenuIfClickOutside($event)"
     >
-      <div class="top-header-background">
-        <cx-page-layout section="topHeader"></cx-page-layout>
+      <div class="top-header-background py-2">
+        <cx-page-layout section="TopHeaderSection"></cx-page-layout>
       </div>
       <cx-page-layout section="header"></cx-page-layout>
-      <cx-page-layout section="bottomNav"></cx-page-layout>
     </header>
     <cx-page-slot position="BottomHeaderSlot"></cx-page-slot>
     <cx-global-message
@@ -30,3 +29,5 @@
     </footer>
   </ng-template>
 </ng-template>
+
+<cx-page-layout section="BottomNavSection"></cx-page-layout>

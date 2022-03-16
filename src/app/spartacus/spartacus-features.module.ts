@@ -55,6 +55,7 @@ import {
 } from '@spartacus/storefront';
 import { CartImportExportFeatureModule } from './features/cart/cart-import-export-feature.module';
 import { CheckoutFeatureModule } from './features/checkout/checkout-feature.module';
+import { MyMobileHeaderModule } from './features/my-mobile-header/my-mobile-header.module';
 import { OrderFeatureModule } from './features/order/order-feature.module';
 import { ProductImageZoomFeatureModule } from './features/product/product-image-zoom-feature.module';
 import { StoreFinderFeatureModule } from './features/storefinder/store-finder-feature.module';
@@ -134,6 +135,7 @@ import { WishlistLinkModule } from './features/wishlist-link/wishlist-link.modul
     CheckoutFeatureModule,
     CartImportExportFeatureModule,
     WishlistLinkModule,
+    MyMobileHeaderModule,
   ],
 })
 export class SpartacusFeaturesModule {}
